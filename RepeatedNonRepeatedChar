@@ -1,0 +1,24 @@
+public class Demo {
+    public static void main(String[] args) {
+
+        String inputStr ="mutellip";
+
+        for(char i :inputStr.toCharArray()){
+            if ( inputStr.indexOf(i) == inputStr.lastIndexOf(i)) {
+                System.out.println("First non-repeating character is: "+i);
+                break;
+            }
+        }
+
+        for(int a=0; a<inputStr.length();a++){
+            for (int b=a+1; b<inputStr.length();b++){
+                if(inputStr.charAt(a)==inputStr.charAt(b)){
+                    System.out.println(inputStr.charAt(a) + " is first repeated");
+                }
+                break;
+            }
+
+        }
+
+    }
+}
