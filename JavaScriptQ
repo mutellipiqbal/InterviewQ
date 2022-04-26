@@ -1,0 +1,17 @@
+//1.counting frequecy of char in string
+
+function count (string) {  
+  var count = {};
+  string.split('').forEach(function(s) {
+     count[s] ? count[s]++ : count[s] = 1;
+  });
+  return count;
+}
+
+//2. remove duplicated words
+
+function removeDuplicatedWords(s){
+return [...new Set(s.split(" "))].join(" ");
+}
+
+
