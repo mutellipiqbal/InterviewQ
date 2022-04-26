@@ -14,4 +14,62 @@ function removeDuplicatedWords(s){
 return [...new Set(s.split(" "))].join(" ");
 }
 
+//3. filter the item inside array
+
+const items=[
+{name: "Apple", price: 150},
+{name: "Microsoft", price: 100},
+{name: "Samsung", price: 100},
+{name: "Apple", price: 250}
+]
+
+const filteredItems=items.filter((item)=>{
+return item.name==="Apple"
+})
+
+//4. map the items in array
+
+const mappedItems=items.map((item)=>{
+return item.name
+})
+
+//5. find item in array
+
+const findItems=items.find((item)=>{
+return item.name==="Samsung"
+})
+
+//6. forEach
+
+items.forEach((item)=>{
+console.log(item.name);
+})
+
+//7. every method
+
+const everyItem=items.every((item)=>{
+ return item.price>1000
+})
+
+//8. some method
+
+const everyItem=items.some((item)=>{
+ return item.price>100
+})
+
+//9. find total
+
+const total=items.reduce((currentSum, item)=>{
+ return item.price+currentSum
+}, 0)
+
+//10 include
+
+const arr=[1, 2, 3, 5, 12, 45]
+
+const include=arr.includes(22);
+
+
+
+
 
